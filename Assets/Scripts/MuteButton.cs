@@ -1,18 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class MuteButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private const string MasterVolumeParametr = "MasterVolume"; // Parameter name for the master volume in the AudioMixer
+
+    [SerializeField] private AudioMixer _audioMixer;
+    [SerializeField] private Slider _volume;
+
+    private bool _isMuted = false;
+    private float _muteVolume = -80f; // Volume level for mute (in decibels)
+
+    public void OnButtonClick()
     {
-        
+        if (_isMuted == false)
+            _audioMixer.GetFloat(MasterVolumeParametr, out _previousVolume);
+
+        float volume = _isMuted ? _previousVolume : _muteVolume; // Toggle between previous volume and -80 dB (mute)
+        _audioMixer.SetFloat(MasterVolumeParametr, volume); // Set volume
+        _isMuted = !_isMuted; // Toggle mute state
     }
 
-    // Update is called once per frame
-    void Update()
+    private float GetSliderValue()
     {
-        
+        return _volume.value;rt
     }
 }
+evnf
