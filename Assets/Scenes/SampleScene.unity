@@ -282,6 +282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 316935410}
   - component: {fileID: 316935411}
+  - component: {fileID: 316935412}
   m_Layer: 5
   m_Name: MainVolume
   m_TagString: Untagged
@@ -359,10 +360,24 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &316935412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316935409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d89ba5adeee053449b46a04bf94654d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioMixer: {fileID: 24100000, guid: c8e0d662be7bea74e8934f4b163613d1, type: 2}
+  _exposedParameterName: MasterVolume
 --- !u!1 &393210052
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,6 +884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 689754597}
   - component: {fileID: 689754598}
+  - component: {fileID: 689754599}
   m_Layer: 5
   m_Name: MusicVolume
   m_TagString: Untagged
@@ -950,6 +966,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &689754599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689754596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d89ba5adeee053449b46a04bf94654d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioMixer: {fileID: 24100000, guid: c8e0d662be7bea74e8934f4b163613d1, type: 2}
+  _exposedParameterName: MusicVolume
 --- !u!1 &717389445
 GameObject:
   m_ObjectHideFlags: 0
@@ -2946,6 +2976,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1824026609}
   - component: {fileID: 1824026610}
+  - component: {fileID: 1824026611}
   m_Layer: 5
   m_Name: ButtonsVolume
   m_TagString: Untagged
@@ -3027,6 +3058,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1824026611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824026608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d89ba5adeee053449b46a04bf94654d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioMixer: {fileID: 24100000, guid: c8e0d662be7bea74e8934f4b163613d1, type: 2}
+  _exposedParameterName: ButtonsVolume
 --- !u!1 &1880107762
 GameObject:
   m_ObjectHideFlags: 0
