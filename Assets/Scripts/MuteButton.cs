@@ -11,6 +11,7 @@ public class MuteButton : MonoBehaviour
 
     private bool _isMuted = false;
     private float _muteVolume = -80f; // Volume level for mute (in decibels)
+    private float _previousVolume;
 
     public void OnButtonClick()
     {
