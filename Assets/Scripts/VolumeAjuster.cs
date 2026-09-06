@@ -1,18 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class VolumeAjuster : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private AudioMixer _audioMixer;
+    [SerializeField] private string _exposedParameterName;
 
-    // Update is called once per frame
-    void Update()
+    private const float MinVolumeInDecibels = -80f;
+    private const float MinLinearVolume = 0.0001f;
+
+    public void SetVolume(float linearValue)
     {
-        
+        float volumeInDecibels;
+
+        if (linearValue > MinLinearVolume)
+            volumeInDecibels = Mathf.Log10(linearValue) * 20f;
+        else
+            volumeInDecibels = MinVolumeInDecibels;
+
+        _audioMixer.SetFloat(_exposedParameterName, volumeInDecibels);
     }
 }
