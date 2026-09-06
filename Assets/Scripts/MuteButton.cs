@@ -24,7 +24,6 @@ public class MuteButton : MonoBehaviour
 
     private float GetSliderValue()
     {
-        return _volume.value;rt
+        return _volume.value;
     }
 }
-evnf
