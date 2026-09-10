@@ -3,18 +3,18 @@ using UnityEngine.Audio;
 
 public class VolumeAjuster : MonoBehaviour
 {
-    [SerializeField] private AudioMixer _audioMixer;
-    [SerializeField] private string _exposedParameterName;
-
     private const float MinVolumeInDecibels = -80f;
     private const float MinLinearVolume = 0.0001f;
 
-    public void SetVolume(float linearValue)
+    [SerializeField] private AudioMixer _audioMixer;
+    [SerializeField] private string _exposedParameterName;
+
+    public void SetVolume(float sliderValue)
     {
         float volumeInDecibels;
 
-        if (linearValue > MinLinearVolume)
-            volumeInDecibels = Mathf.Log10(linearValue) * 20f;
+        if (sliderValue > MinLinearVolume)
+            volumeInDecibels = Mathf.Log10(sliderValue) * 20f;
         else
             volumeInDecibels = MinVolumeInDecibels;
 
